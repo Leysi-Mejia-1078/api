@@ -63,10 +63,9 @@ def index():
 
 # Ruta para obtener productos
 @app.route('/api/products', methods=['GET'])
-def get_products():
-    products = Producto.query.all()
-    return jsonify({"products": [p.to_dict() for p in products]})
-
+def obtener_productos():
+    productos = Producto.query.all()
+    return jsonify({"products": [p.to_dict() for p in productos]})
 # Ruta para agregar un nuevo producto
 @app.route('/api/products', methods=['POST'])
 def add_product():
