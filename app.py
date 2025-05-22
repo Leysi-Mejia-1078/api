@@ -36,7 +36,7 @@ sample_products = [
         "description": "Aretes con perla blanca y broche de plata",
         "price": 95.00,
         "rating": 4.7,
-        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
+        "thumbnail": ""
     }
 ]
 
