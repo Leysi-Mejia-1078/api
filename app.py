@@ -1,9 +1,17 @@
+import os
 from flask import Flask, request, jsonify
 from models import db, Producto
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db.init_app(app)
+
+# Código de la aplicación y rutas
+
+if __name__ == '__main__':
+    # Usa la variable de entorno PORT o 5000 por defecto
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)  # Escuchar en todas las direcciones y en el puerto adecuado
 
 # Ruta raíz
 @app.route('/')
