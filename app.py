@@ -32,62 +32,63 @@ def insert_sample_products():
         return  # Ya existen productos
     sample_products = sample_products = [
   {
-    "title": "Anillo de compromiso de oro blanco",
-    "description": "Anillo de oro blanco con diamante central",
-    "price": 1500.00,
+    "title": "Anillo de oro",
+    "description": "Anillo elegante de oro de 18 quilates.",
+    "price": 250.00,
     "rating": 4.8,
-    "thumbnail": ""
+    "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
   },
   {
     "title": "Collar de perlas",
-    "description": "Collar de perlas naturales con cierre de plata",
-    "price": 350.00,
-    "rating": 4.7,
-    "thumbnail": ""
-  },
-  {
-    "title": "Pendientes de plata con esmeraldas",
-    "description": "Pendientes de plata 925 con esmeraldas verdes",
-    "price": 220.00,
+    "description": "Collar de perlas de alta calidad.",
+    "price": 150.00,
     "rating": 4.5,
-    "thumbnail": ""
+    "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
   },
   {
-    "title": "Pulsera de cuero y acero inoxidable",
-    "description": "Pulsera unisex de cuero trenzado con detalles de acero inoxidable",
-    "price": 45.00,
-    "rating": 4.4,
-    "thumbnail": ""
-  },
-  {
-    "title": "Anillo de plata con zirconia",
-    "description": "Anillo de plata con zirconia cúbica en forma de corazón",
-    "price": 75.00,
+    "title": "Pulsera de plata",
+    "description": "Pulsera de plata fina con diseño moderno.",
+    "price": 90.00,
     "rating": 4.6,
-    "thumbnail": ""
+    "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
   },
   {
-    "title": "Brazalete de oro rosa",
-    "description": "Brazalete delicado de oro rosa con diseño minimalista",
-    "price": 250.00,
+    "title": "Reloj de lujo",
+    "description": "Reloj de lujo con correa de cuero.",
+    "price": 300.00,
     "rating": 4.9,
-    "thumbnail": ""
+    "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
   },
   {
-    "title": "Reloj de pulsera de lujo",
-    "description": "Reloj de pulsera de lujo con correa de cuero negro y esfera de acero",
-    "price": 1200.00,
+    "title": "Aretes de diamantes",
+    "description": "Aretes de diamantes brillantes y elegantes.",
+    "price": 500.00,
+    "rating": 5.0,
+    "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
+  },
+  {
+    "title": "Anillo de plata",
+    "description": "Anillo de plata con diseño único.",
+    "price": 120.00,
     "rating": 4.7,
-    "thumbnail": ""
+    "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
   },
   {
-    "title": "Anillo de oro con rubí",
-    "description": "Anillo de oro amarillo con rubí ovalado central",
-    "price": 950.00,
+    "title": "Cadenas de oro",
+    "description": "Cadenas de oro 24 quilates, ideales para cualquier ocasión.",
+    "price": 400.00,
     "rating": 4.8,
-    "thumbnail": ""
+    "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
+  },
+  {
+    "title": "Brazalete de acero",
+    "description": "Brazalete de acero inoxidable con diseño minimalista.",
+    "price": 70.00,
+    "rating": 4.4,
+    "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
   }
 ]
+
 
     for p in sample_products:
         db.session.add(Producto(**p))
