@@ -1,0 +1,83 @@
+[33mcommit dae8e5ed25c572cdcac478844b7d3b9264d9b2c8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    datelles finales
+
+[33mcommit 4f2e0f7c21c51a054d2b1f12144357220a5bd914[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    datelles finales
+
+[33mcommit ef180aa35dbdb621cfaae040251cc728bbe79c2f[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    datelles finales
+
+[33mcommit a5c488f9f541cc7408270632765530b850d4bb6c[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    se cambio el idioma de la tabla
+
+[33mcommit c20733334396409a905003467c39495c186ec6a4[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    se cambio el idioma de la tabla
+
+[33mcommit 6e02595e1ed33f05247d10abd6fae98e89f26410[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    se cambio el idioma de la tabla
+
+[33mcommit 5b6d114ccc667234449afb39d87499585d01340e[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    se crea objeto
+
+[33mcommit fcdd55e1a91bb0094c5c6d6cfba1bcacd78c0268[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    cambio de imagenes
+
+[33mcommit 21a10284737134baef92b2c3b46c40c41796ca7e[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    cambio de imagenes
+
+[33mcommit c03763c85c8b6663f70c4387b1a9c978c3c63868[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    Agregada ruta raíz y configuraciones necesarias para la API
+
+[33mcommit 462b09ad0252d2072735fab766979189c63fbd66[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    Configurar Flask para usar el puerto de Render
+
+[33mcommit 5ae604c6616ed7b16e65ff32f9f74ca6fb7a13fc[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    Agregada la ruta raíz '/' para mostrar mensaje
+
+[33mcommit 524687a4454024d6f0bd72a6cc6a4062b8b77bd4[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    Agregado archivo requirements.txt
+
+[33mcommit b7d18e45c6e2d8485065197f5e67be5e60f2e5f4[m
+Author: Angel Perez <a.22308051281086@gmail.com>
+Commit: Angel Perez <a.22308051281086@gmail.com>
+
+    Subida inicial del proyecto Flask
