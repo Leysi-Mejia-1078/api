@@ -30,64 +30,65 @@ class Producto(db.Model):
 def insert_sample_products():
     if Producto.query.first():
         return  # Ya existen productos
-    sample_products = [
+    sample_products = sample_products = [
   {
-    "title": "Lápices HB (paquete de 12)",
-    "description": "Lápices de grafito con borrador",
-    "price": 30.00,
-    "rating": 4.4,
-    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pack%20lapiz.jpg"
+    "title": "Anillo de compromiso de oro blanco",
+    "description": "Anillo de oro blanco con diamante central",
+    "price": 1500.00,
+    "rating": 4.8,
+    "thumbnail": ""
   },
   {
-    "title": "Marcatextos fluorescentes",
-    "description": "Set de 6 colores neón",
-    "price": 65.00,
-    "rating": 4.6,
-    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/marcatextos.jpg"
+    "title": "Collar de perlas",
+    "description": "Collar de perlas naturales con cierre de plata",
+    "price": 350.00,
+    "rating": 4.7,
+    "thumbnail": ""
   },
   {
-    "title": "Regla plástica 30 cm",
-    "description": "Regla transparente de plástico",
-    "price": 10.00,
-    "rating": 4.2,
-    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/regla.jpg"
-  },
-  {
-    "title": "Borrador blanco",
-    "description": "Borrador suave para lápiz",
-    "price": 5.00,
+    "title": "Pendientes de plata con esmeraldas",
+    "description": "Pendientes de plata 925 con esmeraldas verdes",
+    "price": 220.00,
     "rating": 4.5,
-    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/borrador.jpg"
+    "thumbnail": ""
   },
   {
-    "title": "Tijeras escolares",
-    "description": "Tijeras de punta redonda para niños",
-    "price": 15.00,
-    "rating": 4.1,
-    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/tijeras.jpg"
-  },
-  {
-    "title": "Pegamento en barra",
-    "description": "Pegamento no tóxico, fácil de usar",
-    "price": 18.50,
-    "rating": 4.3,
-    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pegamento.jpg"
-  },
-  {
-    "title": "Cartulina blanca",
-    "description": "Cartulina tamaño carta (paquete de 10)",
-    "price": 22.00,
-    "rating": 4.6,
-    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/cartulina.jpg"
-  },
-  {
-    "title": "Notas adhesivas",
-    "description": "Notas amarillas (paquete de 3 bloques)",
-    "price": 12.00,
+    "title": "Pulsera de cuero y acero inoxidable",
+    "description": "Pulsera unisex de cuero trenzado con detalles de acero inoxidable",
+    "price": 45.00,
     "rating": 4.4,
-    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/notas.jpg"
+    "thumbnail": ""
+  },
+  {
+    "title": "Anillo de plata con zirconia",
+    "description": "Anillo de plata con zirconia cúbica en forma de corazón",
+    "price": 75.00,
+    "rating": 4.6,
+    "thumbnail": ""
+  },
+  {
+    "title": "Brazalete de oro rosa",
+    "description": "Brazalete delicado de oro rosa con diseño minimalista",
+    "price": 250.00,
+    "rating": 4.9,
+    "thumbnail": ""
+  },
+  {
+    "title": "Reloj de pulsera de lujo",
+    "description": "Reloj de pulsera de lujo con correa de cuero negro y esfera de acero",
+    "price": 1200.00,
+    "rating": 4.7,
+    "thumbnail": ""
+  },
+  {
+    "title": "Anillo de oro con rubí",
+    "description": "Anillo de oro amarillo con rubí ovalado central",
+    "price": 950.00,
+    "rating": 4.8,
+    "thumbnail": ""
   }
 ]
+
     for p in sample_products:
         db.session.add(Producto(**p))
     db.session.commit()
