@@ -5,6 +5,11 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db.init_app(app)
 
+# Ruta raíz
+@app.route('/')
+def home():
+    return '¡La API de productos está funcionando!'
+
 # Crear productos de ejemplo
 def insertar_productos():
     if Producto.query.first():
@@ -17,62 +22,7 @@ def insertar_productos():
             "rating": 4.7,
             "imagen": "/static/cuaderno.jpg"
         },
-        {
-            "nombre": "Bolígrafos azul (pack x10)",
-            "descripcion": "Bolígrafos de tinta azul, punta fina",
-            "precio": 40.00,
-            "rating": 4.3,
-            "imagen": "/static/boligrafos.jpg"
-        },
-        {
-            "nombre": "Marcadores fluorescentes",
-            "descripcion": "Set de 6 marcadores de colores neón",
-            "precio": 65.00,
-            "rating": 4.6,
-            "imagen": "/static/marcadores.jpg"
-        },
-        {
-            "nombre": "Regla 30cm",
-            "descripcion": "Regla de plástico transparente",
-            "precio": 10.00,
-            "rating": 4.2,
-            "imagen": "/static/regla.jpg"
-        },
-        {
-            "nombre": "Goma de borrar",
-            "descripcion": "Goma blanca para lápiz",
-            "precio": 5.00,
-            "rating": 4.5,
-            "imagen": "/static/goma.jpg"
-        },
-        {
-            "nombre": "Lápices (pack x12)",
-            "descripcion": "Lápices de madera HB con goma",
-            "precio": 30.00,
-            "rating": 4.4,
-            "imagen": "/static/lapices.jpg"
-        },
-        {
-            "nombre": "Tijeras escolares",
-            "descripcion": "Tijeras de punta redonda para niños",
-            "precio": 15.00,
-            "rating": 4.1,
-            "imagen": "/static/tijeras.jpg"
-        },
-        {
-            "nombre": "Pritt barra adhesiva",
-            "descripcion": "Pegamento en barra no tóxico",
-            "precio": 18.50,
-            "rating": 4.3,
-            "imagen": "/static/pritt.jpg"
-        },
-        {
-            "nombre": "Cartulina blanca",
-            "descripcion": "Cartulina tamaño carta, paquete x10",
-            "precio": 22.00,
-            "rating": 4.6,
-            "imagen": "/static/cartulina.jpg"
-        }
+        # Otros productos aquí...
     ]
 
     for p in productos_demo:
@@ -106,5 +56,5 @@ def agregar_producto():
     return jsonify(nuevo.to_dict()), 201
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True)
 
