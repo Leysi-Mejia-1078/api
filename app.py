@@ -8,7 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-<<<<<<< HEAD
+
 # Lista de productos a insertar desde el código (se sincroniza con la BD)
 sample_products = [
     {
