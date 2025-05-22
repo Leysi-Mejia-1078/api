@@ -10,20 +10,20 @@ db = SQLAlchemy(app)
 # Modelo de Producto
 class Producto(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100))
+    title = db.Column(db.String(100))
     description = db.Column(db.String(200))
     price = db.Column(db.Float)
     rating = db.Column(db.Float)
-    image = db.Column(db.String(200))
+    thumbnail = db.Column(db.String(200))
 
     def to_dict(self):
         return {
             "id": self.id,
-            "name": self.name,
+            "title": self.title,
             "description": self.description,
             "price": self.price,
             "rating": self.rating,
-            "image": self.image
+            "thumbnail": self.thumbnail
         }
 
 # Crear productos de ejemplo si no existen
@@ -32,18 +32,18 @@ def insert_sample_products():
         return  # Ya existen productos
     sample_products = [
         {
-            "name": "Professional Notebook",
+            "title": "Professional Notebook",
             "description": "100-page lined notebook",
             "price": 25.50,
             "rating": 4.7,
-            "image": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pack%20lapiz.jpg"
+            "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pack%20lapiz.jpg"
         },
         {
-            "name": "Blue Pens (pack of 10)",
+            "title": "Blue Pens (pack of 10)",
             "description": "Blue ink pens, fine tip",
             "price": 40.00,
             "rating": 4.3,
-            "image": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pack%20lapiz.jpg"
+            "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pack%20lapiz.jpg"
         },
         # Agrega más productos si lo deseas
     ]
@@ -71,11 +71,11 @@ def obtener_productos():
 def add_product():
     data = request.get_json()
     new_product = Producto(
-        name=data['name'],
+        title=data['title'],
         description=data.get('description', ''),
         price=data['price'],
         rating=data.get('rating', 0.0),
-        image=data.get('image', '')
+        thumbnail=data.get('thumbnail', '')
     )
     db.session.add(new_product)
     db.session.commit()
