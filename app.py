@@ -85,7 +85,7 @@ def insert_sample_products():
     "description": "Notas amarillas (paquete de 3 bloques)",
     "price": 12.00,
     "rating": 4.4,
-    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/cartulina.jpg"
+    "thumbnail": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/notas.jpg"
   }
 ]
     for p in sample_products:
