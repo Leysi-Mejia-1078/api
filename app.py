@@ -18,14 +18,14 @@ def insertar_productos():
             "descripcion": "Cuaderno de 100 hojas, rayado",
             "precio": 25.50,
             "rating": 4.7,
-            "imagen": "/static/cuaderno.jpg"
+            "imagen": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/refs/heads/main/pack%20lapiz.jpg"
         },
         {
             "nombre": "Bolígrafos azul (pack x10)",
             "descripcion": "Bolígrafos de tinta azul, punta fina",
             "precio": 40.00,
             "rating": 4.3,
-            "imagen": "/static/boligrafos.jpg"
+            "imagen": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/refs/heads/main/pack%20lapiz.jpg"
         },
         # Agrega más productos si lo deseas
     ]
