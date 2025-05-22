@@ -112,15 +112,18 @@ def obtener_productos():
 # Ruta para agregar un nuevo producto
 @app.route('/api/products', methods=['POST'])
 def add_product():
-    data = request.get_json()
-    new_product = Producto(
-        title=data['title'],
-        description=data.get('description', ''),
-        price=data['price'],
-        rating=data.get('rating', 0.0),
-        thumbnail=data.get('thumbnail', '')
-    )
-    db.session.add(new_product)
+    for p in sample_products:
+        existente = Producto.query.filter_by(title=p["title"]).first()
+        if existente:
+            # Actualiza campos si el producto ya existe
+            existente.description = p["description"]
+            existente.price = p["price"]
+            existente.rating = p["rating"]
+            existente.thumbnail = p["thumbnail"]
+        else:
+            # Inserta nuevo si no existe
+            nuevo = Producto(**p)
+            db.session.add(nuevo)
     db.session.commit()
     return jsonify(new_product.to_dict()), 201
 
