@@ -1,69 +1,86 @@
 import os
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from models import db, Producto
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'  # Usando SQLite para el ejemplo
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db.init_app(app)
+db = SQLAlchemy(app)
+
+# Modelo de Producto
+class Producto(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100))
+    description = db.Column(db.String(200))
+    price = db.Column(db.Float)
+    rating = db.Column(db.Float)
+    image = db.Column(db.String(200))
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "price": self.price,
+            "rating": self.rating,
+            "image": self.image
+        }
 
 # Crear productos de ejemplo si no existen
-def insertar_productos():
+def insert_sample_products():
     if Producto.query.first():
         return  # Ya existen productos
-    productos_demo = [
+    sample_products = [
         {
-            "nombre": "Cuaderno profesional",
-            "descripcion": "Cuaderno de 100 hojas, rayado",
-            "precio": 25.50,
+            "name": "Professional Notebook",
+            "description": "100-page lined notebook",
+            "price": 25.50,
             "rating": 4.7,
-            "imagen": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pack%20lapiz.jpg"
+            "image": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pack%20lapiz.jpg"
         },
         {
-            "nombre": "Bolígrafos azul (pack x10)",
-            "descripcion": "Bolígrafos de tinta azul, punta fina",
-            "precio": 40.00,
+            "name": "Blue Pens (pack of 10)",
+            "description": "Blue ink pens, fine tip",
+            "price": 40.00,
             "rating": 4.3,
-            "imagen": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pack%20lapiz.jpg"
+            "image": "https://raw.githubusercontent.com/Angel-Perez-1086/imagenes_github/main/pack%20lapiz.jpg"
         },
         # Agrega más productos si lo deseas
     ]
-
-    for p in productos_demo:
+    for p in sample_products:
         db.session.add(Producto(**p))
     db.session.commit()
 
 # Crear la base de datos y cargar productos de ejemplo
 with app.app_context():
     db.create_all()
-    insertar_productos()
+    insert_sample_products()
 
 # Ruta raíz
 @app.route('/')
 def index():
-    return "¡La API de productos está funcionando!"
+    return "Product API is running!"
 
 # Ruta para obtener productos
-@app.route('/api/productos', methods=['GET'])
-def obtener_productos():
-    productos = Producto.query.all()
-    return jsonify({"products": [p.to_dict() for p in productos]})
+@app.route('/api/products', methods=['GET'])
+def get_products():
+    products = Producto.query.all()
+    return jsonify({"products": [p.to_dict() for p in products]})
 
 # Ruta para agregar un nuevo producto
-@app.route('/api/productos', methods=['POST'])
-def agregar_producto():
+@app.route('/api/products', methods=['POST'])
+def add_product():
     data = request.get_json()
-    nuevo = Producto(
-        nombre=data['nombre'],
-        descripcion=data.get('descripcion', ''),
-        precio=data['precio'],
+    new_product = Producto(
+        name=data['name'],
+        description=data.get('description', ''),
+        price=data['price'],
         rating=data.get('rating', 0.0),
-        imagen=data.get('imagen', '')
+        image=data.get('image', '')
     )
-    db.session.add(nuevo)
+    db.session.add(new_product)
     db.session.commit()
-    return jsonify(nuevo.to_dict()), 201
+    return jsonify(new_product.to_dict()), 201
 
 # Configuración del puerto y host
 if __name__ == '__main__':

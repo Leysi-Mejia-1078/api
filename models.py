@@ -4,18 +4,18 @@ db = SQLAlchemy()
 
 class Producto(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(100), nullable=False)
-    descripcion = db.Column(db.String(250))
-    precio = db.Column(db.Float, nullable=False)
-    rating = db.Column(db.Float, default=0.0)
-    imagen = db.Column(db.String(250))  # URL o ruta a imagen
+    name = db.Column(db.String(100))
+    description = db.Column(db.String(200))
+    price = db.Column(db.Float)
+    rating = db.Column(db.Float)
+    image = db.Column(db.String(200))
 
     def to_dict(self):
         return {
             "id": self.id,
-            "nombre": self.nombre,
-            "descripcion": self.descripcion,
-            "precio": self.precio,
+            "name": self.name,
+            "description": self.description,
+            "price": self.price,
             "rating": self.rating,
-            "imagen": self.imagen
+            "image": self.image
         }
