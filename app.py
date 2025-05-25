@@ -36,7 +36,7 @@ sample_products = [
         "description": "Este delicado collar presenta una cadena fina de oro de 14k que sostiene un encantador colgante en forma de círculo.",
         "price": 7500.00,
         "rating": 4.7,
-        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/refs/heads/main/collar2.jpg"
+        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/collar2.jpg"
     }
 ]
 
