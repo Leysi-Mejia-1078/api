@@ -11,32 +11,32 @@ db.init_app(app)
 # Lista de productos a insertar desde el código (se sincroniza con la BD)
 sample_products = [
     {
-        "title": "Anillo de plata",
-        "description": "Anillo ajustable de plata esterlina",
-        "price": 150.00,
+        "title": "Anillo Princesa Zafiro Celeste",
+        "description": "Este elegante anillo presenta un deslumbrante zafiro azul genuino de corte princesa como pieza central.",
+        "price": 45000.00,
         "rating": 4.8,
-        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
+        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/refs/heads/main/anillo.jpg"
     },
     {
-        "title": "Collar dorado",
-        "description": "Collar con dije de corazón chapado en oro",
-        "price": 120.00,
+        "title": "Arracadas Dorado Chic",
+        "description": "Su forma redondeada y voluminosa los convierte en una pieza llamativa, perfecta para añadir un toque de glamour a cualquier atuendo.",
+        "price": 5000.00,
         "rating": 4.6,
-        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
+        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/refs/heads/main/aretes.jpg"
     },
     {
-        "title": "Pulsera tejida",
+        "title": "Brazalete Luz de Aurora",
         "description": "Pulsera artesanal ajustable con cuentas",
-        "price": 80.00,
+        "price": 8000.00,
         "rating": 4.5,
-        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
+        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/refs/heads/main/pulsera.jpg"
     },
     {
-        "title": "Aretes de perla",
-        "description": "Aretes con perla blanca y broche de plata",
-        "price": 95.00,
+        "title": "Collar Círculo Eterno de Luz",
+        "description": "Este delicado collar presenta una cadena fina de oro de 14k que sostiene un encantador colgante en forma de círculo.",
+        "price": 7500.00,
         "rating": 4.7,
-        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/anillo5.png"
+        "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/main/collar2.jpg"
     }
 ]
 
