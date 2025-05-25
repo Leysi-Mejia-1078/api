@@ -25,14 +25,14 @@ sample_products = [
         "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/refs/heads/main/aretes.jpg"
     },
     {
-        "title": "Brazalete "Luz de Aurora"",
+        "title": "Brazalete Luz de Aurora",
         "description": "Pulsera artesanal ajustable con cuentas",
         "price": 8000.00,
         "rating": 4.5,
         "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/refs/heads/main/pulsera.jpg"
     },
     {
-        "title": "Collar "Círculo Eterno de Luz"",
+        "title": "Collar Círculo Eterno de Luz",
         "description": "Este delicado collar presenta una cadena fina de oro de 14k que sostiene un encantador colgante en forma de círculo.",
         "price": 7500.00,
         "rating": 4.7,
