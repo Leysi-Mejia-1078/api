@@ -20,7 +20,7 @@ sample_products = [
     {
         "title": "Arracadas "Dorado Chic"",
         "description": "Su forma redondeada y voluminosa los convierte en una pieza llamativa, perfecta para añadir un toque de glamour a cualquier atuendo.",
-        "price": 5,000.00,
+        "price": 5000.00,
         "rating": 4.6,
         "thumbnail": "https://raw.githubusercontent.com/Leysi-Mejia-1078/imagenes/refs/heads/main/aretes.jpg"
     },
